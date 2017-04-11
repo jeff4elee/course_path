@@ -1,4 +1,4 @@
-from catalog_scraper import extract_catalog_dict
+from catalog_scraper import extract_catalog_dict, write_catalog
 
 courses = {}
 
@@ -29,7 +29,7 @@ def dfs(course_info):
 
 	#check if the courses dict already has the course path defined
 	if i in courses:
-		return courses[i]
+		return {i: courses[i]}
 
 	#retrieve the list of preqres for the course
 	pr = [p for p in course_info[2]]
@@ -84,10 +84,10 @@ def dfs(course_info):
 def determine_path(course):
 
 	course_path = dfs(course)
-	print course_path
+
 	print "Root:", course[0]
 
-	print_path(course_path[course[0]], 2)
+	print_path(course_path[course[0]], 4)
 
 def print_path(dict_path, spaces):
 
@@ -97,10 +97,4 @@ def print_path(dict_path, spaces):
 	else:
 		for key in dict_path.iterkeys():
 			print " "*spaces + "Child: " + key
-			print_path(dict_path[key], spaces+2)
-
-#for course in catalog_info:
-#	dfs(course)
-
-#print dfs(catalog_info[11])
-determine_path(catalog_info[11])
+			print_path(dict_path[key], spaces+4)

@@ -1,0 +1,75 @@
+CSE 3,Fluency in Information Technology,
+CSE 4GS,Mathematical Beauty In Rome Lab,MATH 10A MATH 20A
+CSE 5A,Introduction to Programming I,
+CSE 6GS,Mathematical Beauty in Rome Lab,MATH 10A MATH 20A
+CSE 7,Intro to Programming with Matlab,
+CSE 8A,Introduction to Computer Science: Java,
+CSE 8B,Introduction to Computer Science: Java (II),CSE 8A
+CSE 11,Introduction to Computer Science and Object-Oriented Programming: Java,
+CSE 12,Basic Data Structures and Object-Oriented Design,CSE 8B CSE 11
+CSE 15L,Software Tools and Techniques Laboratory,CSE 8B CSE 11
+CSE 20,Introduction to Discrete Mathematics,COGS 7 CSE 8B CSE 11 CSE 8B CSE 11 MATH 15A MATH 15A MATH 15A
+CSE 21,Mathematics for Algorithms and Systems,CSE 20 MATH 15A MATH 15B MATH 15B
+CSE 30,Computer Organization and Systems Programming,CSE 12 CSE 15L
+CSE 80,UNIX Lab,CSE 8B CSE 11
+CSE 86,C++ for Java Programmers,CSE 12
+CSE 87,Freshman Seminars,
+CSE 90,Undergraduate Seminar,
+CSE 91,Perspective in Computer Science and Engineering,
+CSE 95,Tutor Apprenticeship,
+CSE 99,Independent Study in Computer Science and Engineering,OF 30 OF 3
+CSE 100,Advanced Data Structures,CSE 21 MATH 154 MATH 184A CSE 12 CSE 15L CSE 5A MAE 9 CSE 30 ECE 15
+CSE 101,Design and Analysis of Algorithms,CSE 12 CSE 21O MATH 15B MATH 100A MATH 103A CSE 100 MATH 176
+CSE 103,A Practical Introduction to Probability and Statistics,MATH 20A MATH 20B
+CSE 105,Theory of Computability,CSE 12 CSE 15L MATH 15A MATH 109 CSE 20 MATH 184 CSE 21 MATH 100A MATH 103A
+CSE 107,Introduction to Modern Cryptography,CSE 21 MATH 15B CSE 101 CSE 179 MATH 188 CSE 105 CSE 165 MATH 166 MATH 166A
+CSE 110,Software Engineering,CSE 100 CS25 CS26 CS27 CS28 EC26
+CSE 112,Advanced Software Engineering,CSE 110 CSE 100
+CSE 118,Ubiquitous Computing,CSE 131 CSE 132B SCI 102C SCI 121 SCI 184 COMT 111B COMT 115 ECE 111 ECE 118 ECE 191 ECE 192 ICAM 160B
+CSE 120,Principles of Computer Operating Systems,CSE 30 CSE 101 CSE 110
+CSE 121,Operating Systems: Architecture and Implementation,CSE 120
+CSE 123,Computer Networks,CSE 120
+CSE 124,Networked Services,CSE 120
+CSE 125,Software System Design and Implementation,
+CSE 127,Introduction to Computer Security,CSE 21 MATH 154 MATH 184A CSE 120
+CSE 130,Programming Languages: Principles and Paradigms,CSE 12 CSE 100 MATH 176 CSE 105 MATH 166
+CSE 131,Compiler Construction,CSE 100 MATH 176 CSE 105 MATH 166 CSE 70 CSE 110 CSE 130
+CSE 132A,Database System Principles,CSE 100
+CSE 132B,Database System Applications,CSE 132A
+CSE 134B,Web Client Languages,CSE 100 MATH 176
+CSE 135,Online Database Analytics Applications,CSE 100 MATH 176
+CSE 136,Enterprise-class Web Applications,CSE 135
+CSE 140,Components and Design Techniques for Digital Systems,CSE 20 MATH 15A MATH 109 CSE 30 FA17
+CSE 140L,Digital Systems Laboratory,CSE 20 MATH 15A MATH 109 CSE 30 CSE 140 FA17
+CSE 141,Introduction to Computer Architecture,CSE 30 CSE 140 CSE 140L
+CSE 141L,Project in Computer Architecture,CSE 30 CSE 110 CSE 140 CSE 140L CSE 141
+CSE 143,Microelectronic System Design,CSE 140 CSE 170A ECE 81
+CSE 144,Computer-Aided Design of VLSI Circuits,CSE 140 CSE 140L
+CSE 145,Embedded System Design Project,CSE 30
+CSE 148,Advanced Processor Architecture Design Project,CSE 141 CSE 141L
+CSE 150,Introduction to Artificial Intelligence: Search and Reasoning,CSE 100
+CSE 151,Introduction to Artificial Intelligence,CSE 100 MATH 176
+CSE 152,Introduction to Computer Vision,MATH 20F CSE 100 MATH 176 CSE 101 MATH 188
+CSE 153,Cognitive Modeling,CSE 100 MATH 176
+CSE 158,Recommender Systems & Web Mining,CSE 100
+CSE 160,Introduction to Parallel Programming,CSE 100 MATH 176
+CSE 163,Advanced Computer Graphics,CSE 167
+CSE 164,GPU Programming,CSE 167
+CSE 165,3D User Interaction,CSE 167
+CSE 166,Image Processing,MATH 20F CSE 100 MATH 176
+CSE 167,Computer Graphics,CSE 100 MATH 176
+CSE 168,Computer Graphics II: Rendering,CSE 167
+CSE 169,Computer Animation,CSE 167
+CSE 170/ COGS 120,Interaction Design,CSE 8A CSE 11 COGS 1 COGS 187A DSGN 1
+CSE 180,Biology Meets Computing,BILD 1
+CSE 181,Molecular Sequence Analysis,CSE 100 MATH 176 CSE 101 MATH 188 BIMM 100 CHEM 114C
+CSE 182,Biological Databases,CSE 100 MATH 176
+CSE 184,Computational Molecular Biology,BENG 181 BIMM 181 CSE 181 BENG 182 BIMM 182 CHEM 182 CSE 182
+CSE 190,Topics in Computer Science and Engineering,
+CSE 191,Seminar in Computer Science and Engineering,
+CSE 192,Senior Seminar,
+CSE 195,Teaching,
+CSE 197,Field Study in Computer Science and Engineering,
+CSE 198,Directed Study Group,
+CSE 199,Independent Study for Undergraduates,
+CSE 199H,CSE Honors Thesis Research for Undergraduates,

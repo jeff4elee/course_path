@@ -53,8 +53,8 @@ def extract_catalog_dict(record):
 		#creates a list of preqreqs, with a few rules
 		#NO CO-REQUISITES
 		#NO SELF-DEPENDENCIES
-		prereqs = col[2].text.strip().upper().split('CO-REQUISITE', 1)[0]
-		prereqs = clean(prereqs.replace(cse_course, ""))
+		prereqs = col[2].text.strip().upper().split('***', 1)[0].split('CO-REQUISITE', 1)[0]
+		prereqs = clean(prereqs.replace(cse_course, ""), True)
 
 		# 1 capital letter, 0+ letters, space, 1+ digits, 0 or 1 letter
 		# i.e. 'CSE 30' or 'CSE 8A'
@@ -90,7 +90,3 @@ def write_catalog(ids, titles, prereqs, record):
 	if record:
 		end = time.time()
 		print "Completed writing to file... %.3f seconds" % (end-start)
-
-#ids, titles, pres = extract_catalog_dict(record=True)
-#write_catalog(ids, titles, pres, record=True)
-#print "Done."
