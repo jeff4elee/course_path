@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="" method="post" name="page_url">
+
+		{{ form.hidden_tag() }}
+
+	<p>
+		{{ form.course(size=80) }}
+		{% for error in form.course.errors %}
+			<span style="color: red;">[{{error}}]</span>
+		{% endfor %}
+	</p>
+			
+	<p><input type="submit" name="render_path" value="Render Path"></p>
+	<p><button type="reset">Reset Form</button></p>
+
+</form>
+
+<div>
+
+{{ course_path|safe }}
+
+{% endblock %}
