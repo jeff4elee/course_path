@@ -185,7 +185,7 @@ def generate_graph(course):
 	course_path = dfs(course)
 #	path = "Root: " + course[0] + ' - ' + course[1]
 
-	G.add_node(course[0], name=course[0], group="root")
+	G.add_node(course[0], name=course[0], group="Root Course")
 
 	def generate_path(G, parent, dict_path):
 
@@ -195,7 +195,7 @@ def generate_graph(course):
 		if type(dict_path) is list:
 			for item in dict_path:
 				try:
-					G.add_node(item, name=item, group="or")
+					G.add_node(item, name=item, group="Or Courses")
 	
 					G.add_edge(parent, item)
 

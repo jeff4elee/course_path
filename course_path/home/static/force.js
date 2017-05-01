@@ -66,8 +66,8 @@ function update(source) {
 }*/
 
 
-var width = 1800,
-    height = 850;
+var width = 1400,
+    height = 600;
 
 var fill = d3.scale.category20();
 
@@ -115,7 +115,7 @@ d3.json("../static/force.json", function(error, json) {
       .start();
 
   function tick(e) {
-    var k = 6 * e.alpha;
+    var k = 4 * e.alpha;
 
     // Push sources up and targets down to form a weak tree.
     link
@@ -133,6 +133,26 @@ d3.json("../static/force.json", function(error, json) {
         .attr("cy", function(d) { return d.y; });
 
   }
+
+  var legend = svg.selectAll(".legend")
+      .data(fill.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", fill);
+
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
+
 });
 
 
