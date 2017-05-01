@@ -195,7 +195,7 @@ def generate_graph(course):
 		if type(dict_path) is list:
 			for item in dict_path:
 				try:
-					G.add_node(item, name=item, group="Any Satisfy the Prerequisite")
+					G.add_node(item, name=item, group="Or Courses")
 	
 					G.add_edge(parent, item)
 
@@ -210,7 +210,7 @@ def generate_graph(course):
 
 			for key in dict_path.iterkeys():
 
-				G.add_node(key, name=key, group="Required Prerequisite")
+				G.add_node(key, name=key)
 				G.add_edge(parent, key)
 		
 				generate_path(G, key, dict_path[key])
