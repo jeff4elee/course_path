@@ -1,8 +1,8 @@
 from home import app
-from dag_analyzer import course_catalog, determine_path
 from catalog_scraper import read_catalog
 from flask import render_template, flash, redirect, session, url_for, request, g
 from .forms import CourseForm
+from dag_analyzer import generate_graph, course_catalog
 
 @app.route('/', methods=['POST', 'GET'])
 @app.route('/index', methods=['POST', 'GET'])
@@ -16,11 +16,11 @@ def index():
 
 		course_id = response.upper().replace(" ", "")
 
-		path = determine_path(course_catalog[course_id])
-
+		path = generate_graph(course_catalog[course_id])
+		
 		return render_template('index.html',
 			form=form,
-			course_path=path)
+			read=True)
 
 	return render_template('index.html',
 		form=form)

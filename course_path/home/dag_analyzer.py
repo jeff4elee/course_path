@@ -1,5 +1,9 @@
 from catalog_scraper import extract_catalog_dict, write_catalog, read_catalog
+import json
+import networkx as nx
+from networkx.readwrite import json_graph
 import os.path
+
 
 if(os.path.isfile('courses.csv')):
 
@@ -173,3 +177,46 @@ def calculate_path(dict_path, spaces, path, str_format=None):
 			path += calculate_path(dict_path[key], spaces+3, " ")
 
 	return path
+
+def generate_graph(course):
+
+	G = nx.DiGraph()
+
+	course_path = dfs(course)
+#	path = "Root: " + course[0] + ' - ' + course[1]
+
+	G.add_node(course[0], name=course[0], group="root")
+
+	def generate_path(G, parent, dict_path):
+
+		if type(dict_path) is str:
+			return
+
+		if type(dict_path) is list:
+			for item in dict_path:
+				try:
+					G.add_node(item, name=item, group="or")
+	
+					G.add_edge(parent, item)
+
+					course = course_catalog[item.upper().replace(" ", "")]
+					generate_path(G, item, dfs(course))
+				except:
+					continue
+
+		else:
+			
+	#		G.add_edges_from([(parent, key) for key in dict_path.iterkeys()])
+
+			for key in dict_path.iterkeys():
+
+				G.add_node(key, name=key)
+				G.add_edge(parent, key)
+		
+				generate_path(G, key, dict_path[key])
+
+	#print_path(course_path[course[0]], 4)
+	generate_path(G, course[0], course_path[course[0]])
+
+	d = json_graph.node_link_data(G) # node-link format to serialize
+	json.dump(d, open('home/static/force.json','w'))

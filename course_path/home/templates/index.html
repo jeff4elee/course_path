@@ -20,6 +20,16 @@
 
 <div>
 
-{{ course_path|safe }}
+{% if read %}
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='force.css') }}"/>
+
+    <div id="chart"></div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='force.js') }}"></script>
+
+{% endif %}
 
 {% endblock %}
