@@ -114,7 +114,7 @@ def determine_path(course):
 	path = "Root: " + course[0] + ' - ' + course[1]
 
 	#print_path(course_path[course[0]], 4)
-	return calculate_path(course_path[course[0]], 4, path)
+	return calculate_path(course_path[course[0]], 3, path)
 
 def print_path(dict_path, spaces, str_format=None):
 
@@ -128,14 +128,14 @@ def print_path(dict_path, spaces, str_format=None):
 		for item in dict_path:
 			try:
 				course = course_catalog[item.upper().replace(" ", "")]
-				print_path(dfs(course), spaces+4, "Or Root:")
+				print_path(dfs(course), spaces+3, "Or Root:")
 			except:
 				continue
 
 	else:
 		for key in dict_path.iterkeys():
 			print " "*spaces + str_format, key
-			print_path(dict_path[key], spaces+2)
+			print_path(dict_path[key], spaces+3)
 
 def calculate_path(dict_path, spaces, path, str_format=None):
 	"""
@@ -162,7 +162,7 @@ def calculate_path(dict_path, spaces, path, str_format=None):
 		for item in dict_path:
 			try:
 				course = course_catalog[item.upper().replace(" ", "")]
-				path += calculate_path(dfs(course), spaces+2, " ", "Or Root:")
+				path += calculate_path(dfs(course), spaces, " ", "Or Root:")
 			except:
 				continue
 
@@ -170,6 +170,6 @@ def calculate_path(dict_path, spaces, path, str_format=None):
 	else:
 		for key in dict_path.iterkeys():
 			path += "<br>" + "&emsp;"*spaces + str_format + " " + key
-			path += calculate_path(dict_path[key], spaces+2, " ")
+			path += calculate_path(dict_path[key], spaces+3, " ")
 
 	return path
