@@ -3,3 +3,4 @@
 A course path is a directed acyclic graph with the source vertex being the "root" course, and all its outgoing edges being its prerequisites.
 
 ![alt text](https://github.com/jeff4elee/course_path/blob/master/course_path/examples/CSE12.PNG?raw=true)
+![alt text](https://github.com/jeff4elee/course_path/blob/master/course_path/examples/CSE30.PNG?raw=true)
