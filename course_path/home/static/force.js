@@ -67,13 +67,13 @@ function update(source) {
 
 
 var width = 1400,
-    height = 600;
+    height = 750;
 
 var fill = d3.scale.category20();
 
 var force = d3.layout.force()
-    .charge(-600)
-    .linkDistance(250)
+    .charge(-400)
+    .linkDistance(200)
     .size([width, height]);
 
 var svg = d3.select("body").append("svg")
@@ -115,7 +115,7 @@ d3.json("../static/force.json", function(error, json) {
       .start();
 
   function tick(e) {
-    var k = 4 * e.alpha;
+    var k = 6 * e.alpha;
 
     // Push sources up and targets down to form a weak tree.
     link
