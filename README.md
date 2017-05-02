@@ -7,4 +7,4 @@ A course path is a directed acyclic graph with the source vertex being the "root
 <br></br>
 <hr></hr>
 <strong> Dynamic creation of CSE30 course path </strong>
-![alt text](https://github.com/jeff4elee/course_path/blob/master/course_path/examples/CSE30.PNG?raw=true)
+![alt text]https://github.com/jeff4elee/course_path/blob/master/course_path/examples/CSE30.PNG?raw=true
